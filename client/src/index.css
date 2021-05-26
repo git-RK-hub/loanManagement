@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Nunito&display=swap");
+
+:root {
+  --blue: #0b21ee;
+  --lg-black: #313131ea;
+  --black: #000000;
+  --lg-blue: #0b22eef1;
+  --white: #ffffff;
+  --lg-white: #eeeeee;
+  --lg-white-tp: #eeeeeed0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  margin: 0px auto;
+  padding: 0px;
+  font-family: "Nunito", sans-serif;
+}
+.errorDiv {
+  width: 90%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid red;
+  background: #f72828be;
+  color: var(--white);
+  font-size: 0.8em;
+  display: grid;
+  place-items: center;
+}
+
+.fas {
+  margin-right: 1em;
+}
+
+.button {
+  width: 90%;
+  background: var(--blue);
+  border: 0px;
+  font-family: "Maven Pro", sans-serif;
+  height: 2em;
+  color: var(--white);
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* -------------- Navbar ----------- */
+.nav {
+  margin: 0px auto;
+  width: 80%;
+  height: 70px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav .brand {
+  font-size: 1.5em;
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.brand:hover {
+  color: var(--lg-blue);
+}
+
+.nav-links {
+  min-width: 40%;
+  display: flex;
+  justify-content: center;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: bold;
+  color: var(--lg-black);
+}
+
+.navLink {
+  margin-right: 2em;
+}
+
+.navLink:hover {
+  color: var(--black);
+}
+
+/* ----------- Navbar ends---------- */
+
+/* ------------Login Form -----------*/
+
+.login-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  /* box-shadow: 0px 1px 5px 0px rgb(173, 172, 172); */
+}
+
+.login-container__text {
+  flex: 0.6;
+  position: relative;
+}
+
+.text {
+  position: absolute;
+  width: 60%;
+  height: 50%;
+  top: 30%;
+  left: 20%;
+}
+
+.text span {
+  color: var(--lg-blue);
+}
+
+.text p {
+  font-size: 1.2em;
+}
+
+.form {
+  flex: 0.4;
+  display: grid;
+  place-items: center;
+}
+
+.login-form {
+  width: 55%;
+  height: 50%;
+  background: white;
+  box-shadow: 0px 0px 10px 5px rgb(238, 233, 233);
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.register-form {
+  width: 55%;
+  min-height: 50%;
+  background: white;
+  box-shadow: 0px 0px 10px 5px rgb(238, 233, 233);
+  padding-left: 20px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.input-box {
+  position: relative;
+}
+
+.input-box input {
+  width: 90%;
+  height: 2rem;
+  padding: 0px;
+  padding-top: 2px;
+  border: none;
+  border-bottom: 2px solid silver;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 1em;
+  outline: none;
+  font-weight: bold;
+}
+
+.input-box label {
+  position: absolute;
+  bottom: 8px;
+  left: 0px;
+  color: grey;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  transform: translateY(-20px);
+  color: var(--lg-blue);
+  font-weight: bold;
+}
+
+.input-box .underline {
+  position: absolute;
+  bottom: 0px;
+  height: 2px;
+  width: 90%;
+}
+
+.input-box .underline:before {
+  position: absolute;
+  background: var(--lg-blue);
+  content: "";
+  height: 100%;
+  width: 100%;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.input-box input:focus ~ .underline:before,
+.input-box input:valid ~ .underline:before {
+  transform: scaleX(1);
+}
+
+.register-form .input-box {
+  margin-top: 10px;
+}
+
+#logoutBtn {
+  display: grid;
+  place-items: center;
+}
+
+.btnToLogin,
+.btnToRegister {
+  cursor: pointer;
+}
+
+/* ------------Login ends ---------- */
+
+/* ------------How to apply containter */
+
+.info-container {
+  width: 100%;
+  height: 300px;
+  background: var(--lg-white);
+  padding-top: 10px;
+}
+
+.info-container h2 {
+  text-align: center;
+  padding: 0px;
+}
+
+.info-list {
+  padding-left: 100px;
+  width: 90%;
+}
+
+.info-list__item {
+  font-size: 1.3em;
+  margin: 0.5em;
+}
+
+/* -------------Ends------------------ */
+
+/* -------------EMI calculator-------- */
+
+.calci-container {
+  width: 100%;
+  height: 60vh;
+}
+
+.calci-container h2 {
+  text-align: center;
+}
+
+.calci {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.calci .calci-cal {
+  flex: 0.3;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 30px;
+}
+
+.calci .calci-res {
+  padding-top: 0px;
+  flex: 0.3;
+}
+
+.calci-res p {
+  font-weight: 500;
+}
+
+.calci-res h4 {
+  color: var(--blue);
+}
+
+/* -------------EMI ends --------------*/
+
+/* -------------Footer ---------------- */
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  background: var(--lg-white);
+  width: 100%;
+  height: 200px;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0px;
+}
+
+.eicons {
+  display: flex;
+}
+
+.eicons .eicon {
+  margin-right: 5px;
+  font-size: 2em;
+  color: var(--lg-blue);
+}
+
+/* -------------Footer ends------------ */
+
+/* ------------- Loans container ------ */
+
+.myloans-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 20vh;
+  background: var(--white);
+  padding: 20px;
+}
+.myloans-container .myLoans {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.myloans-container h3 {
+  text-align: center;
+}
+
+.loans-container {
+  display: flex;
+  flex-direction: column;
+  background: var(--lg-white);
+  padding: 20px;
+}
+
+.loans-container .loans {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.loans-container h3 {
+  text-align: center;
+}
+
+.loan-card {
+  width: 18%;
+  margin: 3% 2% 0% 5%;
+  min-height: 250px;
+  background: var(--lg-blue);
+  box-shadow: 2px 4px 4px 2px #a7a5a5;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+
+.loan-card__img {
+  width: 100%;
+  height: 70%;
+  font-size: 5em;
+  background: var(--white);
+}
+
+.loan-card__category,
+.loan-card__amount,
+.loan-card__tenure,
+.loan-card__interest {
+  color: var(--white);
+  font-family: "Maven Pro", sans-serif;
+  margin: 5px 0px 5px 5px;
+}
+
+.loan-application__card .loan-card__endDate,
+.loan-application__card .loan-card__startDate,
+.loan-application__card .loan-card__emi,
+.loan-application__card .loan-card__method {
+  color: var(--white);
+  font-family: "Maven Pro", sans-serif;
+  font-size: 0.8em;
+}
+
+/* -------------- loans ends ---------- */
+
+/* --------------- loan application form -- */
+.backdrop {
+  width: 100%;
+  height: 100vh;
+  scroll-behavior: unset;
+  background: var(--lg-white-tp);
+  position: absolute;
+  z-index: 100;
+}
+
+.loan-application__container {
+  z-index: 200;
+  width: 40%;
+  min-height: 90vh;
+  position: absolute;
+  transform: translate(80%, 5%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: var(--white);
+  align-items: center;
+}
+
+.loan-application__form {
+  flex: 1;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 20px;
+}
+
+.loan-application__container p {
+  text-align: center;
+  font-weight: bold;
+}
+
+.input-box__date {
+  color: var(--lg-black);
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box__date input {
+  width: 90%;
+}
+
+.checked-btn {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* ----------------- laon application ends---------------- */
+
+/* ------------------Loader  --------------------------*/
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid var(--lg-blue);
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: var(--lg-blue) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ------------------Loader ends -------*/
